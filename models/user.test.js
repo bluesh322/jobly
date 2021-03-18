@@ -138,6 +138,7 @@ describe("get", function () {
       username: "u1",
       firstName: "U1F",
       lastName: "U1L",
+      jobs: [],
       email: "u1@email.com",
       isAdmin: false,
     });
