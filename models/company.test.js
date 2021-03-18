@@ -157,7 +157,7 @@ describe("findAll", function () {
     ]);
   });
 
-  test("works: filter by name and minEmployees", async () => {
+  test("works: filter by name and maxEmployees", async () => {
     let query = {name: "c1", maxEmployees: "2"}
     let companies = await Company.findAll(query);
     expect(companies).toEqual([
@@ -194,6 +194,14 @@ describe("get", function () {
       description: "Desc1",
       numEmployees: 1,
       logoUrl: "http://c1.img",
+      jobs: [
+        {
+          id: expect.any(Number),
+          title: "j1",
+          salary: 70000,
+          equity: "0",
+        }
+      ]
     });
   });
 
